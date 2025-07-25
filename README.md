@@ -1,12 +1,50 @@
-# React + Vite
+# 🛍️ PinkCard - React E-Ticaret Sitesi
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bu proje, sade ve modern bir kullanıcı arayüzü ile geliştirilmiş bir React tabanlı e-ticaret sitesidir. Kullanıcılar ürünleri inceleyebilir, sepete ekleyebilir ve ödeme sayfasına ilerleyebilir.
 
-Currently, two official plugins are available:
+## 🚀 Özellikler
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-  Ürün listesi ve detay sayfaları
+-  Sepete ürün ekleme ve sepet görüntüleme
+-  Kategoriye göre filtreleme
+-  Ödeme sayfası
+-  Modern UI tasarımı (Material UI ile)
+-  React Router ile sayfa geçişleri
 
-## Expanding the ESLint configuration
+## 🛠️ Kullanılan Teknolojiler
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- React Router
+- Material UI
+- JavaScript (ES6+)
+- Vite
+
+## 📷 Ekran Görüntüleri
+
+### 🏠 Ana Sayfa
+![Ana Sayfa](./homepage.png)
+![Ana Sayfa 2](./homepage1.png)
+![Ana Sayfa 3](./homepage2.png)
+![Ana Sayfa 4](./homepage3.png)
+
+### 🛍️ Ürün Detay Sayfası
+![Ürün Detay](./product-detail.png)
+
+### 🛒 Sepet Sayfası
+![Sepet](./cart-page.png)
+
+### 💳 Ödeme Sayfası
+![Ödeme Sayfa 1](./checkout-page.png)  
+![Ödeme Sayfa 2](./checkout.png)
+
+
+## 💻 Kurulum
+
+```bash
+git clone https://github.com/iremtokus/PinkCard.git
+cd PinkCard
+npm install
+npm run dev
+
+✨ Geliştirici
+👩‍💻 İrem Tokuş 
