@@ -1,10 +1,10 @@
 import React from "react";
 import { Box, Typography, Button, Divider } from "@mui/material";
 import { FcEmptyTrash } from "react-icons/fc";
-import { useNavigate } from "react-router-dom"; // Yönlendirme için eklendi
+import { useNavigate } from "react-router-dom"; 
 
 function CartPage({ cart, onAdd, onRemove, onDecrease }) {
-  const navigate = useNavigate(); // hook kullanımı
+  const navigate = useNavigate(); 
 
   const total = cart.reduce(
     (sum, item) => sum + parseFloat(item.price) * item.quantity,
@@ -118,7 +118,7 @@ function CartPage({ cart, onAdd, onRemove, onDecrease }) {
               "&:hover": { backgroundColor: "#c2185b" },
               fontWeight: "bold",
             }}
-            onClick={() => navigate("/checkout")} // yönlendirme buraya geldi
+            onClick={() => navigate("/checkout")} 
           >
             ALIŞVERİŞİ TAMAMLA
           </Button>

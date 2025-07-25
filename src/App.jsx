@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ProductDetail from "./pages/ProductDetail";
-import CheckoutPage from "./pages/CheckoutPage"; // ✅ eklendi
+import CheckoutPage from "./pages/CheckoutPage"; // 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
@@ -8,7 +8,7 @@ import ProductCard from "./components/ProductCard";
 import CartPage from "./pages/CartPage";
 import { MdOutlineSavedSearch } from "react-icons/md";
 
-// Görseller
+
 import bileklik from "./images/bileklik.webp";
 import bileklik2 from "./images/shopping.webp";
 import bileklik3 from "./images/img-0019.webp";
