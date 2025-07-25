@@ -22,20 +22,21 @@ Bu proje, sade ve modern bir kullanıcı arayüzü ile geliştirilmiş bir React
 ## 📷 Ekran Görüntüleri
 
 ### 🏠 Ana Sayfa
-![Ana Sayfa](./mkdir screenshots/homepage.png)
-![Ana Sayfa 2](./mkdir screenshots/homepage1.png)
-![Ana Sayfa 3](./mkdir screenshots/homepage2.png)
-![Ana Sayfa 4](./mkdir screenshots/homepage3.png)
+![Ana Sayfa](./screenshots/homepage.png)
+![Ana Sayfa 2](./screenshots/homepage1.png)
+![Ana Sayfa 3](./screenshots/homepage2.png)
+![Ana Sayfa 4](./screenshots/homepage3.png)
 
 ### 🛍️ Ürün Detay Sayfası
-![Ürün Detay](./mkdir screenshots/product-detail.png)
+![Ürün Detay](./screenshots/project-detail.png)
 
 ### 🛒 Sepet Sayfası
-![Sepet](./mkdir screenshots/cart-page.png)
+![Sepet](./screenshots/cart-page.png)
 
 ### 💳 Ödeme Sayfası
-![Ödeme Sayfa 1](./mkdir screenshots/checkout-page.png)  
-![Ödeme Sayfa 2](./mkdir screenshots/checkout.png)
+![Ödeme Sayfa 1](./screenshots/checkout-page.png)  
+![Ödeme Sayfa 2](./screenshots/checkout.png)
+
 
 
 ## 💻 Kurulum
