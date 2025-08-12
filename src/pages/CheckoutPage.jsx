@@ -39,7 +39,7 @@ function CheckoutPage({ cart }) {
     0
   );
 
-  // ✅ Geçerli ve eksiksiz giriş kontrolü
+
   const handleOrderSubmit = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const cardNumberRegex = /^\d{16}$/;

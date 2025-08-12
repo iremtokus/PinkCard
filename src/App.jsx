@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import ProductDetail from "./pages/ProductDetail";
 import CheckoutPage from "./pages/CheckoutPage"; // 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "./App.css";
+
 import Header from "./components/Header";
 import ProductCard from "./components/ProductCard";
 import CartPage from "./pages/CartPage";
 import { MdOutlineSavedSearch } from "react-icons/md";
+import HeroVideo from "./components/HeroVideo";
+
+
 
 
 import bileklik from "./images/bileklik.webp";
@@ -174,100 +177,112 @@ function App() {
       />
 
       <Routes>
-        <Route
-          path="/"
-          element={
-            <div style={{ padding: "2rem" }}>
-              {/* Kategori + Arama */}
-              <div
+      <Route
+  path="/"
+  element={
+    <>
+      {/* ÜSTTE TAM EKRAN VİDEO */}
+      <HeroVideo />
+
+      {/* AŞAĞIDA ÜRÜNLER */}
+      <section id="products" className="products-section">
+        <div style={{ padding: "2rem" }}>
+          {/* Kategori + Arama */}
+          <div
+            style={{
+              marginBottom: "1.5rem",
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "1rem",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
                 style={{
-                  marginBottom: "1.5rem",
-                  display: "flex",
-                  flexWrap: "wrap",
-                  gap: "1rem",
-                  alignItems: "center",
+                  padding: "0.5rem 1rem",
+                  border: "none",
+                  backgroundColor:
+                    selectedCategory === category ? "#e91e63" : "#f8bbd0",
+                  color: "#fff",
+                  borderRadius: "1rem",
+                  cursor: "pointer",
+                  fontWeight: "bold",
+                  transition: "all 0.3s",
                 }}
               >
-                {categories.map((category) => (
-                  <button
-                    key={category}
-                    onClick={() => setSelectedCategory(category)}
-                    style={{
-                      padding: "0.5rem 1rem",
-                      border: "none",
-                      backgroundColor:
-                        selectedCategory === category ? "#e91e63" : "#f8bbd0",
-                      color: "#fff",
-                      borderRadius: "1rem",
-                      cursor: "pointer",
-                      fontWeight: "bold",
-                      transition: "all 0.3s",
-                    }}
-                  >
-                    {category}
-                  </button>
-                ))}
+                {category}
+              </button>
+            ))}
 
-                {/* Arama Kutusu */}
-                <div
-                  style={{
-                    position: "relative",
-                    flex: "1",
-                    maxWidth: "250px",
-                    marginLeft: "auto",
-                    marginRight: "2rem",
-                  }}
-                >
-                  <MdOutlineSavedSearch
-                    style={{
-                      position: "absolute",
-                      top: "50%",
-                      left: "10px",
-                      transform: "translateY(-50%)",
-                      color: "#e91e63",
-                      fontSize: "1.2rem",
-                    }}
-                  />
-                  <input
-                    type="text"
-                    placeholder="Ürün ara..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    style={{
-                      padding: "0.5rem 0.5rem 0.5rem 2rem",
-                      borderRadius: "1rem",
-                      border: "1px solid #e91e63",
-                      outline: "none",
-                      fontSize: "1rem",
-                      width: "100%",
-                    }}
-                  />
-                </div>
-              </div>
+            
 
-              {/* Ürünler */}
-              <div className="product-grid">
-                {filteredProducts.map((product) => (
-                  <ProductCard
-                    key={product.id}
-                    id={product.id}
-                    image={product.image}
-                    name={product.name}
-                    price={product.price}
-                    onAddToCart={() =>
-                      handleAddToCart({
-                        id: product.id,
-                        image: product.image,
-                        name: product.name,
-                        price: product.price,
-                      })
-                    }
-                  />
-                ))}
-              </div>
+            {/* Arama Kutusu */}
+            <div
+              style={{
+                position: "relative",
+                flex: "1",
+                maxWidth: "250px",
+                marginLeft: "auto",
+                marginRight: "2rem",
+              }}
+            >
+              <MdOutlineSavedSearch
+                style={{
+                  position: "absolute",
+                  top: "50%",
+                  left: "10px",
+                  transform: "translateY(-50%)",
+                  color: "#e91e63",
+                  fontSize: "1.2rem",
+                }}
+              />
+              <input
+                type="text"
+                placeholder="Ürün ara..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                style={{
+                  padding: "0.5rem 0.5rem 0.5rem 2rem",
+                  borderRadius: "1rem",
+                  border: "1px solid #e91e63",
+                  outline: "none",
+                  fontSize: "1rem",
+                  width: "100%",
+                }}
+              />
             </div>
-          }
-        />
+          </div>
+
+          {/* Ürünler */}
+          <div className="product-grid">
+            {filteredProducts.map((product) => (
+              <ProductCard
+                key={product.id}
+                id={product.id}
+                image={product.image}
+                name={product.name}
+                price={product.price}
+                onAddToCart={() =>
+                  handleAddToCart({
+                    id: product.id,
+                    image: product.image,
+                    name: product.name,
+                    price: product.price,
+                  })
+                }
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
+  }
+/>
+
 
         {/* Sepet Sayfası */}
         <Route
@@ -299,10 +314,13 @@ function App() {
           path="/checkout"
           element={<CheckoutPage cart={cart} />}
         />
+
       </Routes>
     </Router>
   );
 }
+
+
 
 export default App;
 
