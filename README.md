@@ -22,10 +22,11 @@ Bu proje, sade ve modern bir kullanıcı arayüzü ile geliştirilmiş bir React
 ## 📷 Ekran Görüntüleri
 
 ### 🏠 Ana Sayfa
-![Ana Sayfa](./screenshots/homepage.png)
+![Ana Sayfa 1](./screenshots/homepage0.png)
 ![Ana Sayfa 2](./screenshots/homepage1.png)
 ![Ana Sayfa 3](./screenshots/homepage2.png)
 ![Ana Sayfa 4](./screenshots/homepage3.png)
+![Ana Sayfa 5](./screenshots/homepage4.png)
 
 ### 🛍️ Ürün Detay Sayfası
 ![Ürün Detay](./screenshots/project-detail.png)
